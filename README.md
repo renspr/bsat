@@ -23,11 +23,11 @@ in-house use, reducing dependcies is not our primary goal.
 
 * [rails](http://rubygems.org/gems/rails),                           ~> 4.0
 * [sass-rails](http://rubygems.org/gems/sass-rails),                 ~> 4.0
-* [bootstrap-sass](http://rubygems.org/gems/bootstrap-sass),         ~> 3.1
+* [bootstrap-sass](http://rubygems.org/gems/bootstrap-sass),         ~> 3.2
 * [coffee-rails](http://rubygems.org/gems/coffee-rails),             ~> 4.0
 * [compass-rails](http://rubygems.org/gems/compass-rails),           ~> 1.1
 * [jquery-rails](http://rubygems.org/gems/jquery-rails),             ~> 3.1
-* [font-awesome-rails](http://rubygems.org/gems/font-awesome-rails), ~> 4.0
+* [font-awesome-rails](http://rubygems.org/gems/font-awesome-rails), ~> 4.2
 * [slim](http://rubygems.org/gems/slim),                             ~> 2.0
 
 BSAT will also include the following Javascript librarys.
