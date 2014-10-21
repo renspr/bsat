@@ -14,23 +14,11 @@ window.bsat.utils.readyOrPageChange ->
       $('body').removeClass('left-sidebar-open')
       $('body').toggleClass('left-sidebar-close')
 
-
-  $('#right-sidebar-toggle-button').click (e) ->
-    e.preventDefault()
-    if $(window).width() <= 768
-      $('body').toggleClass('right-sidebar-open')
-      $('body').removeClass('right-sidebar-close')
-    else
-      $('body').removeClass('right-sidebar-open')
-      $('body').toggleClass('right-sidebar-close')
-
   #
   # Detect if there is no sidebar
   #
   unless $('#left-sidebar-wrapper')[0]
     $('body').addClass('no-left-sidebar')
-  unless $('#right-sidebar-wrapper')[0]
-    $('body').addClass('no-right-sidebar')
 
   #
   # Use IScroll for scrolling the sidebar

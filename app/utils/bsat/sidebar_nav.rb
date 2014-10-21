@@ -50,7 +50,7 @@ module Bsat
         subnav.back(t('.back'), '#', link_to_options: { class: 'subnav-back' })
         yield(subnav)
         content_for(
-          "bsat_#{@options[:side]}_sidebar_nav_items".to_sym,
+          "bsat_sidebar_nav_items".to_sym,
           content_tag(:ul, id: path, class: 'subnav-menu nav nav-stacked nav-pills hidden') { subnav.render(true) }
         )
         link_to("##{path}", class: 'subnav-toggle') do
