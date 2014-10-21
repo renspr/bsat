@@ -11,19 +11,6 @@ html(lang="de")
     = csrf_meta_tag
 
   body
-    - bsat_brand title: 'BSAT DEMO', path: root_path
-
-    - bsat_navbar(:left) do |navbar|
-      - navbar.link 'Action', '#', icon: 'home'
-      - navbar.link 'Action', '#', badge: 2
-      - navbar.dropdown 'Dropdown' do |dropdown|
-        - dropdown.link 'Action', '#'
-        - dropdown.link 'Action', '#'
-        - dropdown.link 'Action', '#'
-
-    - bsat_navbar(:right) do |navbar|
-      - navbar.link 'Action', '#'
-
     - bsat_sidebar_nav do |nav|
       - nav.back 'Back', '#'
       - nav.link 'Action 1', '#', icon: 'bolt',    active: /\A\//

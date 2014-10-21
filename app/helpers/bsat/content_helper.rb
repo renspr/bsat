@@ -39,16 +39,5 @@ module Bsat
       content_for(:bsat_page_actions, page_actions.render(:large))
       content_for(:bsat_small_page_actions, page_actions.render(:small))
     end
-
-    def bsat_navbar(location)
-      navbar_items = Navbar.new(self)
-      yield(navbar_items) if block_given?
-
-      location = [:left, :right].find(->{:right}){|l| l == location.try(:to_sym)}
-      case location
-        when :left  then content_for(:bsat_navbar_left_items, navbar_items.render)
-        when :right then content_for(:bsat_navbar_right_items, navbar_items.render)
-      end
-    end
   end
 end

@@ -120,45 +120,6 @@ The result is an empty BSAT view that looks like this
 
 ![Screenshot 2](etc/screenshot2.png)
 
-### Brand
-
-To set the brand there is a helper called `bsat_brand`. You should provide the `title` and the `path/url` where
-the `title` is linked to.
-
-```slim
-- bsat_brand title: 'BSAT DEMO', path: root_path
-```
-
-![Screenshot 3](etc/screenshot3.png)
-
-The helper also excepts a block that allows you to provide more than just a title string.
-
-```slim
-- bsat_brand path: root_path
-  => fa_icon 'group'
-  = "Foo Bar"
-```
-
-### Navbar
-
-For the navbar we provide a helper to create links on the left and on the right side of the navbar. The helper
-is called `bsat_navbar`. It accepts one argument to set the side `:left` or `:right` and a block to set the links.
-
-```slim
-- bsat_navbar(:left) do |navbar|
-  - navbar.link 'Action', '#', icon: 'home'
-  - navbar.link 'Action', '#', badge: 2
-  - navbar.dropdown 'Dropdown' do |dropdown|
-    - dropdown.link 'Action', '#'
-    - dropdown.link 'Action', '#'
-    - dropdown.link 'Action', '#'
-
-- bsat_navbar(:right) do |navbar|
-  - navbar.link 'Action', '#'
-```
-
-![Screenshot 4](etc/screenshot4.png)
-
 ### Page title
 
 For a page you can set a title using the `bsat_page_title` helper.
