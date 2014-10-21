@@ -18,10 +18,17 @@ Gem::Specification.new do |s|
   s.add_dependency "sass-rails",         ">= 4.0"
   s.add_dependency "bootstrap-sass",     ">= 3.2"
   s.add_dependency "coffee-rails",       ">= 4.0"
-  s.add_dependency "compass-rails",      ">= 1.1"
+  s.add_dependency "compass-rails",      ">= 2.0"
   s.add_dependency "jquery-rails",       ">= 3.1"
   s.add_dependency "font-awesome-rails", ">= 4.2"
   s.add_dependency "slim",               ">= 2.0"
+
+  #
+  # FIXME
+  # Lock sprockets to <= 2.11.0 until fix available
+  # for https://github.com/Compass/compass-rails/issues/144
+  #
+  s.add_dependency "sprockets", "~> 2.8", "<= 2.11.0"
 
   s.add_development_dependency "sqlite3"
 end
