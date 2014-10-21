@@ -1,6 +1,6 @@
 - if content_for?(:bsat_sidebar_nav_items)
-  #left-sidebar-wrapper
-    = link_to '', '#', id: 'left-sidebar-toggle-button', class: 'sidebar-toggle-button'
+  #sidebar-wrapper
+    = link_to '', '#', id: 'sidebar-toggle-button', class: 'sidebar-toggle-button'
 
     nav#sidebar
       = yield(:bsat_sidebar_nav_items)

@@ -22,7 +22,7 @@ body.sidebar-close {
   @include closed-sidebar;
 }
 
-body.no-left-sidebar {
+body.no-sidebar {
   #page #content-area {
     left: 0;
 

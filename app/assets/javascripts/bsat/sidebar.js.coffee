@@ -5,20 +5,20 @@ window.bsat.utils.readyOrPageChange ->
   # gets closed on small devices using media queries,
   # so we need to take this into account.
   #
-  $('#left-sidebar-toggle-button').click (e) ->
+  $('#sidebar-toggle-button').click (e) ->
     e.preventDefault()
     if $(window).width() <= 768
-      $('body').toggleClass('left-sidebar-open')
-      $('body').removeClass('left-sidebar-close')
+      $('body').toggleClass('sidebar-open')
+      $('body').removeClass('sidebar-close')
     else
-      $('body').removeClass('left-sidebar-open')
-      $('body').toggleClass('left-sidebar-close')
+      $('body').removeClass('sidebar-open')
+      $('body').toggleClass('sidebar-close')
 
   #
   # Detect if there is no sidebar
   #
-  unless $('#left-sidebar-wrapper')[0]
-    $('body').addClass('no-left-sidebar')
+  unless $('#sidebar-wrapper')[0]
+    $('body').addClass('no-sidebar')
 
   #
   # Use IScroll for scrolling the sidebar

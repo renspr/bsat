@@ -1,10 +1,10 @@
-@mixin closed-left-sidebar {
+@mixin closed-sidebar {
   #content-area {
     left: 0;
   }
 
-  #left-sidebar-wrapper {
-    #left-sidebar-toggle-button {
+  #sidebar-wrapper {
+    #sidebar-toggle-button {
       left: 0 !important;
     }
 
@@ -14,13 +14,13 @@
   }
 }
 
-@mixin opened-left-sidebar {
+@mixin opened-sidebar {
   #content-area {
     left: $bsat-sidebar-width;
   }
 
-  #left-sidebar-wrapper {
-    #left-sidebar-toggle-button {
+  #sidebar-wrapper {
+    #sidebar-toggle-button {
       left: $bsat-sidebar-width;
     }
 
@@ -30,12 +30,12 @@
   }
 }
 
-@include opened-left-sidebar;
+@include opened-sidebar;
 
-#left-sidebar-wrapper {
+#sidebar-wrapper {
   $z-index: 1001;
 
-  #left-sidebar-toggle-button {
+  #sidebar-toggle-button {
     @include single-transition(left, 0.3s, ease-in-out);
     z-index: $z-index;
   }
@@ -77,15 +77,15 @@
 body {
   overflow: hidden;
 
-  &.left-sidebar-close {
-    @include closed-left-sidebar;
+  &.sidebar-close {
+    @include closed-sidebar;
   }
 
-  &.left-sidebar-open {
-    @include opened-left-sidebar;
+  &.sidebar-open {
+    @include opened-sidebar;
   }
 }
 
 @media (max-width: $screen-sm-min) {
-  @include closed-left-sidebar;
+  @include closed-sidebar;
 }
