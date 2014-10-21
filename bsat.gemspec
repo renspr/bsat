@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency "sass-rails",         ">= 4.0"
   s.add_dependency "bootstrap-sass",     ">= 3.2"
   s.add_dependency "coffee-rails",       ">= 4.0"
-  s.add_dependency "compass-rails",      ">= 2.0"
+  s.add_dependency "compass-rails",      ">= 1.1"
   s.add_dependency "jquery-rails",       ">= 3.1"
   s.add_dependency "font-awesome-rails", ">= 4.2"
   s.add_dependency "slim",               ">= 2.0"

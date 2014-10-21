@@ -9,6 +9,8 @@ gemspec
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
+gem 'sass-rails',    '~> 4.0.3'
+gem 'compass-rails', '~> 1.1.3'
 
 # To use debugger
 # gem 'debugger'
