@@ -4,13 +4,13 @@ BSAT
 [![Code Climate](https://codeclimate.com/github/renspr/bsat.png)](https://codeclimate.com/github/renspr/bsat)
 [![Dependency Status](https://gemnasium.com/renspr/bsat.svg)](https://gemnasium.com/renspr/bsat)
 
-BSAT is an admin template build with Bootstrap 3 packaged as a Rails engine. With BSAT it's
-easy to build a nice and uniform admin backend for your Rails project that works on
-desktops, tablets and smartphones. Based on Bootstrap 3 BSAT adds some ready to use UI elements
-and Rails helpers.
+BSAT is minimalistic admin template build with Bootstrap 3 and packaged as a Rails engine. With BSAT it's
+super easy to build a nice and uniform admin UI for your Rails projects. BSAT is responsive and works for
+desktops, tablets and smartphones.
 
-By default BSAT gives you the following UI. It's your job to fill out the gaps. Need styling?
-It's Bootstrap 3!
+Based on Bootstrap 3, BSAT adds some ready to use UI elements and Rails helpers.
+
+By default BSAT gives you the following UI. It's your job to fill out the gaps.
 
 ![Screenshot 1](etc/screenshot1.png)
 
@@ -19,20 +19,20 @@ Dependencies
 ------------
 
 BSAT is closely coupled with the following dependencies. As BSAT is mainly developed for
-in-house use, reducing dependcies is not our primary goal.
+in-house use, reducing dependencies is not our primary goal.
 
-* [rails](http://rubygems.org/gems/rails),                           ~> 4.0
-* [sass-rails](http://rubygems.org/gems/sass-rails),                 ~> 4.0
-* [bootstrap-sass](http://rubygems.org/gems/bootstrap-sass),         ~> 3.2
-* [coffee-rails](http://rubygems.org/gems/coffee-rails),             ~> 4.0
-* [compass-rails](http://rubygems.org/gems/compass-rails),           ~> 1.1
-* [jquery-rails](http://rubygems.org/gems/jquery-rails),             ~> 3.1
-* [font-awesome-rails](http://rubygems.org/gems/font-awesome-rails), ~> 4.2
-* [slim](http://rubygems.org/gems/slim),                             ~> 2.0
+* [rails](http://rubygems.org/gems/rails)                           `>= 4.0`
+* [sass-rails](http://rubygems.org/gems/sass-rails)                 `>= 4.0`
+* [bootstrap-sass](http://rubygems.org/gems/bootstrap-sass)         `>= 3.2`
+* [coffee-rails](http://rubygems.org/gems/coffee-rails)             `>= 4.0`
+* [compass-rails](http://rubygems.org/gems/compass-rails)           `>= 1.1`
+* [jquery-rails](http://rubygems.org/gems/jquery-rails)             `>= 3.1`
+* [font-awesome-rails](http://rubygems.org/gems/font-awesome-rails) `>= 4.2`
+* [slim](http://rubygems.org/gems/slim)                             `>= 2.0`
 
-BSAT will also include the following Javascript librarys.
+BSAT will also include the following Javascript libraries.
 
-* [iscroll](http://iscrolljs.com/), ~> 5.0
+* [iscroll](http://iscrolljs.com/) `>= 5.0`
 
 
 Installation
@@ -41,7 +41,7 @@ Installation
 Add it to your Gemfile (__Note__: we have no official release yet, so you need to use the github source at the moment):
 
 ```ruby
-gem 'bsat', '> 0.0.1', github: 'renspr/bsat', branch: 'master'
+gem 'bsat', '~> 2.0.0', github: 'renspr/bsat', branch: 'master'
 ```
 
 Run the following command to install it:
@@ -50,15 +50,21 @@ Run the following command to install it:
 bundle install
 ```
 
-### Sass
+### Stylesheets
 
-Import BSAT into a Sass file (for example, `application.css.scss`) to get all of BSAT's styles, mixins and variables!
+Import BSAT into your Stylesheet manifest file (usually in `application.css.scss`). __Make sure you have the required dependencies in place before importing BSAT.__
 
 ```scss
+@import "bootstrap";
+@import "compass/utilities";
+@import "compass/css3";
+@import "font-awesome";
 @import "bsat";
 ```
 
-The full list of BSAT variables can be found [here](https://github.com/renspr/bsat/blob/master/app/assets/stylesheets/bsat/_variables.scss). You can override these by simply redefining the variable before the `@import` directive, e.g.:
+__Please note__: In this example we are using Sass syntax. If your manifest file is not a Sass file, make sure to use the default `#= require` statements.
+
+The full list of BSAT variables can be found [here](https://github.com/renspr/bsat/blob/master/app/assets/stylesheets/bsat/_variables.scss). You can override these by changing the variables before the `@import "bsat";` directive, e.g.:
 
 ```scss
 $bsat-sidebar-width: 250px;
@@ -67,19 +73,16 @@ $bsat-sidebar-width: 250px;
 @import "bsat";
 ```
 
-__Please note:__  You need to require `bootstrap` manually before you require `bsat`.
-
 ### Javascript
 
-We have a helper that includes all BSAT javascripts. Put this in your Javascript manifest (usually in `application.js`) to load the files in the correct order.
+Import BSAT in your Javascript manifest (usually in `application.js`). __Make sure you have the required dependencies in place before importing BSAT.__
 
 ```js
-// Loads all BSAT javascripts
+//= require jquery
+//= requier bootstrap
+//= require iscroll
 //= require bsat
 ```
-
-__Please note:__ You need to require `jquery` and `bootstrap` manually before you require `bsat`.
-
 
 Usage
 -----
@@ -88,7 +91,7 @@ BSAT works by defining a bunch of `content_for` variables that finally renders i
 
 ### Render BSAT layout
 
-In your application layout file you normally would call `= yield` (note we are using slim syntax here) where the main content should be rendered. To render BSAT all you have to do ist to call
+In your application layout file you normally would call `= yield` (Note: we are using slim syntax here) where the main content should be rendered. To render BSAT all you have to do ist to call
 
 ```slim
 = bsat(yield)
