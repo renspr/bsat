@@ -94,10 +94,10 @@
   position: absolute;
   top: 0;
   width: $bast-sidebar-toggle-button-width;
-  height: $bsat-page-header-height;
+  height: $bsat-page-header-height - 1px;
   line-height: $bsat-page-header-height;
   text-align: center;
-  background-color: $bsat-sidebar-background-color;
+  background-color: $bsat-page-header-background-color;
   &:before {
     @extend .fa;
     @extend .fa-bars;

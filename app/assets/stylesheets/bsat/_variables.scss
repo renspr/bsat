@@ -1,19 +1,25 @@
+$bsat-gray-lighter-color: #fafcfc;
+$bsat-gray-light-color: #ebeef0;
+$bsat-gray-color: #93a7b7;
+$bsat-gray-dark-color: #30373d;
+$bsat-gray-darker-color: #262c30;
+
 $bsat-sidebar-width: 200px !default;
 
-$bsat-sidebar-background-color: mix($gray-lighter, lighten($brand-primary, 44%), 30%) !default;
-$bsat-sidebar-text-color: $text-color !default;
+$bsat-sidebar-background-color: $bsat-gray-dark-color !default;
+$bsat-sidebar-text-color: $bsat-gray-color !default;
 $bsat-sidebar-icon-color: $bsat-sidebar-text-color !default;
 $bast-sidebar-toggle-button-width: 35px !default;
 
-$bsat-sidebar-active-background-color: $brand-primary !default;
+$bsat-sidebar-active-background-color: $bsat-gray-darker-color !default;
 $bsat-sidebar-active-text-color: #fff !default;
 $bsat-sidebar-active-icon-color: #fff !default;
-$bsat-sidebar-active-border-color: darken($bsat-sidebar-active-background-color, 5%) !default;
+$bsat-sidebar-active-border-color: transparent !default;
 
-$bsat-sidebar-hover-background-color: rgba($brand-primary, 0.15) !default;
+$bsat-sidebar-hover-background-color: $bsat-sidebar-active-background-color !default;
 $bsat-sidebar-hover-text-color: $bsat-sidebar-text-color !default;
 $bsat-sidebar-hover-icon-color: $bsat-sidebar-icon-color !default;
-$bsat-sidebar-hover-border-color: darken($bsat-sidebar-hover-background-color, 5%) !default;
+$bsat-sidebar-hover-border-color: $bsat-sidebar-active-border-color !default;
 
 $bsat-page-header-height: 65px !default;
 $bsat-page-header-background-color: #fff !default;
